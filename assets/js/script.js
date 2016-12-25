@@ -15,7 +15,7 @@ $(document).ready(function() {
          $('#left-block').css('height', rightHeight);
          $('#right-block').css('height', rightHeight);
       }
-	  
+
 // Toggle Navigation
 	 $(".menu a").click(function() {
 		 $("nav").fadeToggle("slow", "linear");
@@ -23,24 +23,24 @@ $(document).ready(function() {
 		 $(".mid-menu").toggleClass("mid-animate");
 		 $(".bottom-menu").toggleClass("bottom-animate");
 		 return false;
-		
+
 	 });
-	 
+
 // Ajax Subscription System for Home
 
 	$(".newsletter-signup").ajaxChimp({
 		callback: mailchimpResponse,
-		url: "http://codepassenger.us10.list-manage.com/subscribe/post?u=6b2e008d85f125cf2eb2b40e9&id=6083876991" // Replace your mailchimp post url inside double quote "".  
+		url: "http://formspree.io/support@bluenation.co" // Replace your mailchimp post url inside double quote "".
 	});
 
 	function mailchimpResponse(resp) {
 		 if(resp.result === 'success') {
-		 
+
 			$('.newsletter-success').html(resp.msg).fadeIn().delay(3000).fadeOut();
-			
+
 		} else if(resp.result === 'error') {
 			$('.newsletter-error').html(resp.msg).fadeIn().delay(3000).fadeOut();
-		}  
+		}
 	};
-	
+
  });
