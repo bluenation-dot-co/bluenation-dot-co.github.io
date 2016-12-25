@@ -28,10 +28,10 @@ $(document).ready(function() {
 
 // Ajax Subscription System for Home
 
-	$(".newsletter-signup").ajaxChimp({
-		callback: mailchimpResponse,
-		url: "http://formspree.io/support@bluenation.co" // Replace your mailchimp post url inside double quote "".
-	});
+	// $(".newsletter-signup").ajaxChimp({
+	// 	callback: mailchimpResponse,
+	// 	url: "//bluenation.us14.list-manage.com/subscribe/post?u=f26309e41e743575bd10e592a&amp;id=a4b7348acf" // Replace your mailchimp post url inside double quote "".
+	// });
 
 	function mailchimpResponse(resp) {
 		 if(resp.result === 'success') {
